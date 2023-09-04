@@ -54,7 +54,7 @@ export default function NavBar() {
                    </span>
                 </div>
                  <img
-                    src="https://yt3.ggpht.com/wgnEbc2Ec2JYkeyzUbiHzDlAFObI2Btwo2YRCEF1aCMBiRc5E_zWy8-URBQS3EMQ1yzzaGFR=s88-c-k-c0x00ffffff-no-rj-mo"
+                    src="https://yt3.ggpht.com/GlWMQpO4ErVHGNTWEFFU4eVdOI5L9s-RORMzB6ZhIAP_AoADLDywuC7ioNwRkU5MlsKgFAAkqg=s88-c-k-c0x00ffffff-no-rj"
                     className="w-9 h-9 rounded-full"
                     alt="logo"
                  />
