@@ -10,7 +10,7 @@ export default function App() {
         <Routes>
            <Route path='/' element={<Home/>} ></Route>
            <Route path='/search' element={<Search/>} ></Route>
-           <Route path='/watch' element={<Watch/>} ></Route>
+           <Route path='/watch/:id' element={<Watch/>} ></Route>
         </Routes>
      </BrowserRouter>
   )
