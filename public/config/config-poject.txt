@@ -1,0 +1,13 @@
+
+vite - npm init vite nome-do-projeto -- --template react-ts
+
+Install Tailwindcss -
+ npm install -D tailwindcss postcss autoprefixer 
+ npx tailwindcss init -p
+
+react-icons - npm i react-icons
+
+axios - npm i  axios
+
+react-ifinite-scroll - npm i react-infinite-scroll-component
+ redux - npm i  @reduxjs/toolkit react-redux
