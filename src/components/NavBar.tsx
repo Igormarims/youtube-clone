@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { changeSearchTerm, clearSearchTerm, clearVideos } from '../store';
 import { getSearchPageVideos } from '../store/reducers/getSearchPageVideos';
 
+
 export default function NavBar() {
     
     const location = useLocation();
@@ -67,9 +68,9 @@ export default function NavBar() {
                                 />
                        
                         </div>
-                           <button className="h-10 w-16 items-center flex justify-center bg-zinc-800">
-                                 <AiOutlineSearch className="text-xl" />
-                            </button>
+                           <button type="submit" className="h-10 w-16 items-center flex justify-center bg-zinc-800">
+                                 <AiOutlineSearch className="text-xl" />   
+                           </button>
                     </div>
                 </form>
                 <div className="text-xl p-3 bg-zinc-900 rounded-full">

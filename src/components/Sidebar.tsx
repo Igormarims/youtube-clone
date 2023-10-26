@@ -186,7 +186,7 @@ export default function Sidebar() {
       </ul>
       <span className="px-4 text-zinc-400">&copy; 2023 Google</span>
       <br />
-      <p className="px-4 pt-3 text-sm text-zinc-400 ">
+      <p className="px-4 pt-3 text-sm text-zinc-400">
         this clone is for educational purpose only.
       </p>
     </div>

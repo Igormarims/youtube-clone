@@ -21,7 +21,7 @@ const YoutubeSlice = createSlice({
             state.nextPageToken = null;
         },
         changeSearchTerm:(state, action: PayloadAction<string>)=> {
-           state.searchTerm = action.payload
+            state.searchTerm = action.payload
         },
         clearSearchTerm:(state)=>{
             state.searchTerm = '';

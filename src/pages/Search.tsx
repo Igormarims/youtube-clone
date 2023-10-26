@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
+
 import InfiniteScroll from "react-infinite-scroll-component";
+import { useNavigate } from "react-router-dom";
 // import SearchCard from "../components/SearchCard";
 import Sidebar from "../components/Sidebar";
 import Spinner from "../components/Spinner";
 import { clearVideos } from "../store";
 import { useAppDispatch, useAppSelector } from "../store/reducers/hooks";
 import { HomePageVideos } from "../types";
-import { useNavigate } from "react-router-dom";
 import { getSearchPageVideos } from "../store/reducers/getSearchPageVideos";
 import NavBar from "../components/NavBar";
+import SearchCard from "../components/SearchCard";
 
 export default function Search() {
   const navigate = useNavigate();
@@ -18,9 +20,7 @@ export default function Search() {
 
   useEffect(() => {
     dispatch(clearVideos());
-    if (searchTerm === "") {
-      navigate("/")
-    }
+    if (searchTerm === "") navigate("/")
     else {
       dispatch(getSearchPageVideos(false));
     }
@@ -36,19 +36,19 @@ export default function Search() {
         {videos.length ? (
           <div className="py-8 pl-8 flex flex-col gap-5 w-full">
             <InfiniteScroll
-              dataLength={videos.length}
-              next={() => dispatch(getSearchPageVideos(true))}
-              hasMore={videos.length < 500}
-              loader={<Spinner />}
-              height={600}
+            dataLength={videos.length}
+            next={() => dispatch(getSearchPageVideos(true))}
+            hasMore={videos.length < 500}
+            loader={<Spinner />}
+            height={650}
+            
             >
-              {videos.map((item: HomePageVideos) => {
-                return (
-                  <div className="my-5">
-                    {/* <SearchCard data={item} key={item.videoId} /> */}
-                  </div>
-                );
-              })}
+                {videos.map((item: HomePageVideos) => {
+               return( <div className="my-5">
+                         <SearchCard data={item} key={item.videoId} />
+                     </div>
+                    )
+                })}
             </InfiniteScroll>
           </div>
         ) : (
